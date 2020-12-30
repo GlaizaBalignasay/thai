@@ -1,0 +1,234 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+<style>
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+body{
+	background-color:orange;
+	display: grid;
+	place-items: center;
+	text-align: center;
+}
+nav{
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: black;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+
+}
+nav ul{
+	display: flex;
+	flex-wrap: wrap;
+	list-style: none;
+}
+nav ul li{
+	margin: 20px 5px;
+}
+nav ul li a{
+	color: #f2f2f2;
+	text-decoration: none;
+	font-family: montserrat;
+	font-size: 18px;
+	font-weight: 500;
+	padding: 15px 15px;
+	border-radius: 5px;
+	letter-spacing: 1px;
+	transition: all 0.3s ease;
+}
+nav ul li a:hover{
+  	color: orange;
+ 	background: #fff;
+}
+::selection{
+	background: white;
+}
+.wrapper{
+	max-width: 700px;
+	width: 100%;
+	margin: 80px auto;
+	padding: 40px 40px 40px 40px;
+	border-radius: 5px;
+	background: black;
+	box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+}
+.wrapper header{
+	color: #fff;
+	font-size: 30px;
+	font-weight: 600;
+	padding-bottom: 0px;
+}
+.wrapper nav{
+	position: relative;
+	width: 100%;
+	height: 50px;
+	display: flex;
+	align-items: center;
+}
+.wrapper nav label{
+  	display: block;
+  	height: 100%;
+  	width: 100%;
+  	text-align: center;
+  	line-height: 50px;
+  	cursor: pointer;
+  	position: relative;
+  	z-index: 1;
+  	color: #17a2b8;
+  	font-size: 17px;
+ 	 border-radius: 5px;
+  	margin: 0 5px;
+  	transition: all 0.3s ease;
+}
+.wrapper nav label:hover{
+  	background: gray;
+}
+#Pricing:checked ~ nav label.Pricing,
+#Akrapovic:checked ~ nav label.Akrapovic,
+#NCX:checked ~ nav label.NCX,
+#Daeng:checked ~ nav label.Daeng,
+#HiSpeed:checked ~ nav label.HiSpeed{
+  	color: white;
+}
+nav label i{
+  	padding-right: 7px;
+}
+nav .slider{
+  	position: absolute;
+  	height: 100%;
+  	width: 20%;
+  	left: 0;
+  	bottom: 0;
+  	z-index: 0;
+  	border-radius: 5px;
+  	background: black;
+  	transition: all 0.3s ease;
+}
+input[type="radio"]{
+  	display: none;
+}
+#Akrapovic:checked ~ nav .slider{
+  	left: 20%;
+}
+#NCX:checked ~ nav .slider{
+  	left: 40%;
+}
+#Daeng:checked ~ nav .slider{
+  	left: 60%;
+}
+#HiSpeed:checked ~ nav .slider{
+ 	 left: 80%;
+}
+section .content{
+  	display: none;
+  	background: white;;
+}
+#Pricing:checked ~ section .content-1,
+#Akrapovic:checked ~ section .content-2,
+#NCX:checked ~ section .content-3,
+#Daeng:checked ~ section .content-4,
+#HiSpeed:checked ~ section .content-5{
+  display: block;
+}
+section .content .title{
+  	font-size: 21px;
+  	font-weight: 500;
+ 	 margin: 30px 0 10px 0;
+}
+section .content p{
+	text-align: justify;
+}
+
+</style>
+
+</head>
+	<nav>	
+  	<ul>
+		<li><a href="navmen.html">ThaiKana</a></li>
+		<li><a href="h.html">Home</a></li>
+		<li><a href="about.html">About</a></li>
+		<li><a href="price.html">Pricing</a></li>
+		<li><a href="contact.html">Contact</a></li>
+	</ul>
+	</nav>
+
+<body>
+   <div class="wrapper">
+    <header>Product Price<br><br></header>
+    <input type="radio" name="slider" checked id="Pricing">
+    <input type="radio" name="slider" id="Akrapovic">
+    <input type="radio" name="slider" id="NCX">
+    <input type="radio" name="slider" id="Daeng">
+    <input type="radio" name="slider" id="HiSpeed">
+
+    <nav>
+      <label for="Pricing" class="Pricing"><i class="fas fa-Pricing"></i>Pricing</label>
+      <label for="Akrapovic" class="Akrapovic"><i class="fas fa-Akrapovic"></i>Akrapovic</label>
+      <label for="NCX" class="NCX"><i class="fas fa-NCX"></i>NCX</label>
+      <label for="Daeng" class="Daeng"><i class="far fa-Daeng"></i>Daeng</label>
+      <label for="HiSpeed" class="HiSpeed"><i class="far fa-HiSpeed"></i>HiSpeed</label>
+      <div class="slider"></div>
+    </nav>
+
+    <section>
+
+      <div class="content content-1">
+        <div class="title"><br>High Quality in a Cheaper Price<br><br></div>
+        <p>  We are offering quality products to give the best and full sound experience of our exhaust mufflers to our dear customers.<br><br>Shipping Nationwide, We also offer COD,COP, Bank transfer.<br><br><br>
+	<img src="PSX_20201219_180014.jpg" alt="tone" width="650" height="300"/><br><br><br></p></div>
+
+      <div class="content content-2">
+        <div class="title"><br>Akrapovic Muffler Price<br><br></div>
+        <p>Titanium Tip Akrapovic ---------------------- PHP 6,500<br>Full Titanium Akrapovic ---------------------- PHP 8,500<br>
+	   Chrome Tip Akrapovic ---------------------- PHP 6,500<br>Two Tone Akrapovic ---------------------- PHP 6,000<br><br>
+	 <br>Free T-shirt by ThaiKana.PH...<br><br><br>
+	<img src="PSX_20201220_180909.jpg" alt="tone" width="620" height="300"/><br><br>
+	<img src="PSX_20201220_181113.jpg" alt="tone" width="620" height="300"/><br><br>
+	<img src="PSX_20201220_181230.jpg" alt="tone" width="620" height="300"/><br><br>
+	  </p></div>
+
+      <div class="content content-3">
+        <div class="title"><br>NCX Muffler Price<br><br></div>
+        <p>Full Chrome NCX ---------------------- PHP 5,500<br>Full Titanium NCX ---------------------- PHP 7,500<br>
+	Silent Killer NCX ------------------------ PHP 3,500<br>Dual Exhaust NCX ---------------------- PHP 5,000<br><br>
+	<br>Free T-shirt by ThaiKana.PH...<br><br><br>
+	<img src="PSX_20201220_181336.jpg" alt="tone" width="620" height="300"/><br><br>
+	<img src="PSX_20201220_181313.jpg" alt="tone" width="620" height="300"/><br><br>
+	<img src="PSX_20201220_181336.jpg" alt="tone" width="620" height="300"/><br><br>
+	</p></div>
+
+      <div class="content content-4">
+        <div class="title"><br>Daeng Muffler Price<br><br></div>
+        <p>Titanium Tip Daeng  ---------------------- PHP 4,500<br>Full Titanium Daeng ---------------------- PHP 5,500<br>
+	Full Chrome Daeng ------------------------ PHP 3,500<br>Two Tone Daeng --------------------------- PHP 5,000<br><br>
+	<br>Free T-shirt by ThaiKana.PH...<br><br><br>
+	<img src="PSX_20201221_191836.jpg" alt="tone" width="620" height="300"/><br><br>
+	<img src="PSX_20201221_192020.jpg" alt="tone" width="620" height="300"/><br><br>
+	<img src="PSX_20201221_192127.jpg" alt="tone" width="620" height="350"/><br><br>
+	</p></div>
+
+      <div class="content content-5">
+        <div class="title"><br>HiSpeed Muffler Price<br><br></div>
+        <p>Full Chrome HiSpeed ---------------------- PHP 5,500<br>Full Titanium HiSpeed ---------------------- PHP 7,500<br>
+	   Titanium Tip HiSpeed ------------------------ PHP 3,500<br>Two Tone HiSpeed ---------------------- PHP 5,000<br><br>
+	   <br>Free T-shirt by ThaiKana.PH...<br><br><br>
+	<img src="PSX_20201226_234055.jpg" alt="tone" width="620" height="300"/><br><br>
+	<img src="PSX_20201226_234040.jpg" alt="tone" width="620" height="300"/><br><br>
+	<img src="PSX_20201226_234121.jpg" alt="tone" width="620" height="300"/><br><br
+	</p></div>
+
+    </section>
+  </div>
+	
+</body>
+</html>

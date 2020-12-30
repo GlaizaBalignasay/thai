@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+	<meta charset="utf-8">
+	<title>About</title>
+	<link rel="stylesheet" href="navmen.css">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} 
+body{
+	background-color:orange;
+}
+nav{
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: black;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+
+}
+nav .logo{
+  color: orange;
+  font-family: montserrat;
+  font-size: 45px;
+  font-weight: 600;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-family: montserrat;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 15px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover{
+  color: orange;
+  background: #fff;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+.content{
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: -1;
+  width: 100%;
+  padding: 0 30px;
+  font-family: montserrat;
+  color: black;
+}
+.content div{
+  font-size: 40px;
+  font-weight: 700;
+}
+.content1{
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: -1;
+  width: 100%;
+  padding: 0 30px;
+  font-family: 'Poppins', sans-serif;
+  color: black;
+}
+.content1 div{
+  font-size: 30px;
+  font-weight: 700;
+}
+.contentt{
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  height: 400px;
+  width: 750px;
+  overflow: hidden;
+  box-shadow: 1px 1px 15px rgba(0,0,0,0.4);
+}
+.content .images{
+  height: 10%;
+  width: 100%;
+}
+.images img{
+  height: 100%;
+  width: 100%;
+}
+
+section{
+	top: 110%;
+	position: absolute;
+	padding: 0 100px;
+	background: gray;
+	height: 18vh;
+	width: 150vh;
+	display: flex;
+	align-items: bottom;
+}
+.box{
+	
+	position: relative;
+	max-width: 600px;
+	padding: 50px;
+	background: white;
+}
+</style>
+</head>
+	<body>
+	<nav>
+		
+	<ul>
+		<li><a href="navmen.html">ThaiKana</a></li>
+		<li><a href="h.html">Home</a></li>
+		<li><a href="about.html">About</a></li>
+		<li><a href="price.html">Pricing</a></li>
+		<li><a href="contact.html">Contact</a></li>
+	</ul>
+	</nav>
+		<div class="content">
+	<div>
+		About Us</div></div>
+
+	<div class="content1">
+	<div>
+	<br>
+		ThaiKana Muffler PH are a true testament to Filipino ingenuity and craftsmanship.<br>
+		We also make pipes specially made to fit any kind of motorcycle. <br>
+		We can make pipes for any bike and any level of tune that it is in. <br>
+		We can make special pipes for Highly Tuned race bikes.</div></div>
+
+	<div class="contentt">
+		<div class="images">
+			<div class="photo"><img src="PSX_20201219_180014.jpg" alt="tone" width="100" height="100"/><br></div>
+			<div class="photo1"><img src="PSX_20201219_175559.jpg" alt="two" width="100" height="100"/><br></div>
+			<div class="photo2"><img src="PSX_20201219_175822.jpg" alt="two" width="100" height="100"/><br></div>
+			<div class="photo3"><img src="PSX_20201219_175928.jpg" alt="tone" width="100" height="100"/><br></div>
+		</div>
+	</div>
+	<script>
+		var indexValue = 0;
+		function slideShow(){
+		setTimeout(slideShow, 2500);
+		var x;
+		const img = document.querySelectorAll("img");
+		for(x = 0; x < img.length; x++){
+		img[x].style.display = "none";
+        }
+		indexValue++;
+		if(indexValue > img.length){indexValue = 1}
+		img[indexValue -1].style.display = "block";
+	}
+		slideShow();
+	</script>
+	<section>
+		<div clas "box">
+			<h2><br>Quicklinks</h2>
+			<p>For more informations. Please contact us.<br><br>Email: Thaikana@gmail.com<br>Contact number: 0926-199-1458
+			<br>All rights reserved©2020</p>
+		</div>
+	</section>
+	</section>
+	</body>
+</html>

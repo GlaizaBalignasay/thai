@@ -1,0 +1,367 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styli.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+	<style>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+	background: orange;
+}
+nav{
+  display: flex;
+  height: 100%;
+  width: 105%;
+  background: black;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+}
+		nav ul{
+			display: flex;
+			flex-wrap: wrap;
+			list-style: none;
+			
+	}
+		nav ul li{
+			margin: 0px 5px;
+	}
+		nav ul li a{
+			color: #f2f2f2;
+			text-decoration: none;
+			font-family: montserrat;
+			font-size: 18px;
+			font-weight: 500;
+			padding: 15px 15px;
+			border-radius: 5px;
+			letter-spacing: 1px;
+			transition: all 0.3s ease;
+	}
+
+		nav ul li a:hover{
+  			color: orange;
+ 			 background: #fff;
+	}
+
+.cards{
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px;
+}
+.cards h2.header{
+  font-size: 40px;
+  margin: 0 0 30px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.services{
+  display: flex;
+  align-items: center;
+}
+.content{
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  margin: 20px;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 4px;
+  transition: all .3s ease;
+}
+.content .fab{
+  font-size: 70px;
+  margin: 16px 0;
+}
+.content > *{
+  flex: 1 1 100%;
+}
+.content:hover{
+  color: white;
+}
+.content:hover a{
+  border-color: white;
+  background: white;
+}
+.content-1:hover{
+  border-color: #1DA1F2;
+  background: #1DA1F2;
+}
+.content-1:hover a{
+  color: #1DA1F2;
+}
+.content-2:hover{
+  border-color: #E1306C;
+  background: #E1306C;
+}
+.content-2:hover a{
+  color: #E1306C;
+}
+.content-3:hover{
+  border-color: #ff0000;
+  background: #ff0000;
+}
+.content-3:hover a{
+  color: #ff0000;
+}
+.content h2{
+  font-size: 30px;
+  margin: 16px 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.content p{
+  font-size: 17px;
+  font-family: 'Poppins',sans-serif;
+}
+.content a{
+  margin: 22px 0;
+  background: black;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid black;
+  padding: 15px 0;
+  border-radius: 25px;
+  transition: .3s ease;
+}
+.content a:hover{
+  border-radius: 4px;
+}
+@media (max-width: 900px) {
+  .services{
+    display: flex;
+    flex-direction: column;
+  }
+}
+body{
+  display: grid;
+  height: 100%;
+    place-items: center;
+  text-align: center;
+}
+.container{
+  position: relative;
+  width: 400px;
+  background: #111;
+  padding: 50px 30px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.container .post{
+  display: none;
+}
+.container .text{
+  font-size: 25px;
+  color: #666;
+  font-weight: 500;
+}
+.container .edit{
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 16px;
+  color: #666;
+  font-weight: 500;
+  cursor: pointer;
+}
+.container .edit:hover{
+  text-decoration: underline;
+}
+.container .star-widget input{
+  display: none;
+}
+.star-widget label{
+  font-size: 40px;
+  color: #444;
+  padding: 10px;
+  float: right;
+  transition: all 0.2s ease;
+}
+input:not(:checked) ~ label:hover,
+input:not(:checked) ~ label:hover ~ label{
+  color: #fd4;
+}
+input:checked ~ label{
+  color: #fd4;
+}
+input#rate-5:checked ~ label{
+  color: #fe7;
+  text-shadow: 0 0 20px #952;
+}
+#rate-1:checked ~ form header:before{
+  content: "I just hate it 😠";
+}
+#rate-2:checked ~ form header:before{
+  content: "I don't like it 😒";
+}
+#rate-3:checked ~ form header:before{
+  content: "It is awesome 😄";
+}
+#rate-4:checked ~ form header:before{
+  content: "I just like it 😎";
+}
+#rate-5:checked ~ form header:before{
+  content: "I just love it 😍";
+}
+.container form{
+  display: none;
+}
+input:checked ~ form{
+  display: block;
+}
+form header{
+  width: 100%;
+  font-size: 25px;
+  color: #fe7;
+  font-weight: 500;
+  margin: 5px 0 20px 0;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+form .textarea{
+  height: 100px;
+  width: 100%;
+  overflow: hidden;
+}
+form .textarea textarea{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  color: #eee;
+  border: 1px solid #333;
+  background: #222;
+  padding: 10px;
+  font-size: 17px;
+  resize: none;
+}
+.textarea textarea:focus{
+  border-color: #444;
+}
+form .btn{
+  height: 45px;
+  width: 100%;
+  margin: 15px 0;
+}
+form .btn button{
+  height: 100%;
+  width: 100%;
+  border: 1px solid #444;
+  outline: none;
+  background: #222;
+  color: #999;
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+form .btn button:hover{
+  background: #1b1b1b;
+}
+	</style>
+</head>
+	<nav>
+		
+  	<ul>
+		<li><a href="navmen.html">ThaiKana</a></li>
+		<li><a href="h.html">Home</a></li>
+		<li><a href="about.html">About</a></li>
+		<li><a href="price.html">Pricing</a></li>
+		<li><a href="contact.html">Contact</a></li>
+	
+	</ul>
+	</nav>
+<body>
+   <div class="cards">
+      <h2 class="header">
+Contact Us</h2>
+<div class="services">
+        <div class="content content-1">
+          <div class="fab fa-twitter">
+</div>
+<h2>
+Twitter</h2>
+<p>
+https://www.ThaiKanaPH.twitter.com</p>
+<a href="#">Read More</a>
+        </div>
+<div class="content content-2">
+          <div class="fab fa-instagram">
+</div>
+<h2>
+Instagram</h2>
+<p>
+https://www.ThaiKanaPH.instagram.com</p>
+<a href="#">Read More</a>
+        </div>
+<div class="content content-3">
+          <div class="fab fa-youtube">
+</div>
+<h2>
+Youtube</h2>
+<p>
+www.ThaiKanaPH.youtube.com</p>
+<a href="#">Read More</a>
+        </div>
+</div>
+</div>
+
+<div class="container">
+      <div class="post">
+        <div class="text">
+Thanks for rating us!</div>
+<div class="edit">
+EDIT</div>
+</div>
+<div class="star-widget">
+        <input type="radio" name="rate" id="rate-5">
+        <label for="rate-5" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-4">
+        <label for="rate-4" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-3">
+        <label for="rate-3" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-2">
+        <label for="rate-2" class="fas fa-star"></label>
+        <input type="radio" name="rate" id="rate-1">
+        <label for="rate-1" class="fas fa-star"></label>
+        <form action="#">
+          <header></header>
+          <div class="textarea">
+            <textare cols="30" placeholder="Describe your experience.."></textare> 
+
+          <br />
+<div class="btn">
+<button type="submit">Post</button>
+          </div>
+<script>
+      const btn = document.querySelector("button");
+      const post = document.querySelector(".post");
+      const widget = document.querySelector(".star-widget");
+      const editBtn = document.querySelector(".edit");
+      btn.onclick = ()=>{
+        widget.style.display = "none";
+        post.style.display = "block";
+        editBtn.onclick = ()=>{
+          widget.style.display = "block";
+          post.style.display = "none";
+        }
+        return false;
+      }
+    </script>
+
+</body>
+</html>

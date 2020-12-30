@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+	<meta charset="utf-8">
+	<title>Home</title>
+	<link rel="stylesheet" href="navmen.css">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+} 
+body{
+	background-color:orange;
+}
+nav{
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: black;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+
+}
+nav .logo{
+  color: orange;
+  font-family: montserrat;
+  font-size: 45px;
+  font-weight: 600;
+}
+nav ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li{
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #f2f2f2;
+  text-decoration: none;
+  font-family: montserrat;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 15px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover{
+  color: orange;
+  background: #fff;
+}
+nav .menu-btn i{
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+.content{
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: -1;
+  width: 100%;
+  padding: 0 30px;
+  font-family: 'Poppins', sans-serif;
+  color: black;
+}
+.content div{
+  font-size: 40px;
+  font-weight: 700;
+}
+.content1{
+  position: absolute;
+  top: 145%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: -1;
+  width: 100%;
+  padding: 0 30px;
+  font-family: 'Poppins', sans-serif;
+  color: black;
+}
+.content1 div{
+  font-size: 30px;
+  font-weight: 700;
+}
+.section3 {
+			position: relative;
+			top: 20vh;
+			}
+			.favorites{
+  			height: 70%;
+  			display: flex;
+  			place-items: center;
+  			text-align: center;
+			}
+.container{
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card{
+  height: 280px;
+  max-width: 350px;
+  margin: 0 20px;
+  background: #555555;
+  transition: 0.4s;
+  box-shadow: 2px 2px 5px rgba(255,255,255,0.5);
+}
+.card:hover{
+  height: 470px;
+  box-shadow: 5px 5px 10px rgba(255,255,255,0.5);
+}
+.card .img{
+  height: 200px;
+  width: 100%;
+}
+.card .img img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.card .top-text{
+  padding: 5px;
+	font-family: Cairo;
+}
+.card .top-text .name{
+margin: 10px;
+  font-size: 25px;
+  font-weight: 900;
+  color: aquamarine;
+line-height: 1;
+}
+.card .top-text p{
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  line-height: 20px;
+}
+.card .bottom-text{
+  padding: 0 20px 10px 20px;
+  margin-top: 1px;
+  background: #555555;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.1s;
+font-family: B612;
+line-height: 1.5;
+}
+.card:hover .bottom-text{
+  opacity: 1;
+  visibility: visible;
+}
+.card .bottom-text .text{
+  text-align: justify;
+}
+.card .bottom-text .btn{
+  margin: 10px;
+  text-align: left;
+font-family: Cairo;
+}
+.card .bottom-text .btn a{
+  text-decoration: none;
+  background: #add8e6;
+  color: #ffffff;
+  padding: 5px 8px;
+  border-radius: 3px;
+  display: inline-flex;
+  transition: 0.2s;
+}
+.card .bottom-text .btn a:hover{
+  transform: scale(0.9);
+}
+@media screen and (max-width: 978px) {
+  .container{
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .card{
+    max-width: 700px;
+    margin: 20px 0;
+  }
+}
+
+.contentt{
+  position: absolute;
+  top: 70%;
+  left: 2%;
+  height: 600px;
+  width: 750px;
+  overflow: hidden;
+  box-shadow: 1px 1px 15px rgba(0,0,0,0.4);
+}
+.content .images{
+  height: 10%;
+  width: 100%;
+}
+.images img{
+  height: 100%;
+  width: 100%;
+}
+::selection{
+  background: #fa4299;
+  color: #fff;
+}
+
+.wrapper{
+  position: absolute;
+  top: 70%;
+  left: 65%;
+  overflow: hidden;
+  max-width: 390px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+}
+.wrapper .title-text{
+  display: flex;
+  width: 200%;
+}
+.wrapper .title{
+  width: 50%;
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+.wrapper .slide-controls{
+  position: relative;
+  display: flex;
+  height: 50px;
+  width: 100%;
+  overflow: hidden;
+  margin: 30px 0 10px 0;
+  justify-content: space-between;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+}
+.slide-controls .slide{
+  height: 100%;
+  width: 100%;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  line-height: 48px;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.6s ease;
+}
+.slide-controls label.signup{
+  color: #000;
+}
+.slide-controls .slider-tab{
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  left: 0;
+  z-index: 0;
+  border-radius: 5px;
+  background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+input[type="radio"]{
+  display: none;
+}
+#signup:checked ~ .slider-tab{
+  left: 50%;
+}
+#signup:checked ~ label.signup{
+  color: #fff;
+  cursor: default;
+  user-select: none;
+}
+#signup:checked ~ label.login{
+  color: #000;
+}
+#login:checked ~ label.signup{
+  color: #000;
+}
+#login:checked ~ label.login{
+  cursor: default;
+  user-select: none;
+}
+.wrapper .form-container{
+  width: 100%;
+  overflow: hidden;
+}
+.form-container .form-inner{
+  display: flex;
+  width: 200%;
+}
+.form-container .form-inner form{
+  width: 50%;
+  transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+.form-inner form .field{
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+}
+.form-inner form .field input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding-left: 15px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  border-bottom-width: 2px;
+  font-size: 17px;
+  transition: all 0.3s ease;
+}
+.form-inner form .field input:focus{
+  border-color: #fc83bb;
+  /* box-shadow: inset 0 0 3px #fb6aae; */
+}
+.form-inner form .field input::placeholder{
+  color: #999;
+  transition: all 0.3s ease;
+}
+form .field input:focus::placeholder{
+  color: #b3b3b3;
+}
+.form-inner form .pass-link{
+  margin-top: 5px;
+}
+.form-inner form .signup-link{
+  text-align: center;
+  margin-top: 30px;
+}
+.form-inner form .pass-link a,
+.form-inner form .signup-link a{
+  color: #fa4299;
+  text-decoration: none;
+}
+.form-inner form .pass-link a:hover,
+.form-inner form .signup-link a:hover{
+  text-decoration: underline;
+}
+form .btn{
+  height: 50px;
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+}
+form .btn .btn-layer{
+  height: 100%;
+  width: 300%;
+  position: absolute;
+  left: -100%;
+  background: -webkit-linear-gradient(right, #a445b2, #fa4299, #a445b2, #fa4299);
+  border-radius: 5px;
+  transition: all 0.4s ease;;
+}
+form .btn:hover .btn-layer{
+  left: 0;
+}
+form .btn input[type="submit"]{
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  background: none;
+  border: none;
+  color: #fff;
+  padding-left: 0;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 500;
+  cursor: pointer;
+}
+section{
+	top: 150%;
+	position: absolute;
+	padding: 0 100px;
+	background: gray;
+	height: 18vh;
+	width: 150vh;
+	display: flex;
+	align-items: bottom;
+}
+.box{
+	
+	position: relative;
+	max-width: 600px;
+	padding: 50px;
+	background: white;
+}
+</style>
+</head>
+	<body>
+	<nav>
+		
+	<ul>
+		<li><a href="navmen.html">ThaiKana</a></li>
+		<li><a href="h.html">Home</a></li>
+		<li><a href="about.html">About</a></li>
+		<li><a href="price.html">Pricing</a></li>
+		<li><a href="contact.html">Contact</a></li>
+	</ul>
+	</nav>
+		<div class="content">
+	<div>
+		Home</div></div>
+
+	<div class="content1">
+	<div>
+		All pipes are made with high quality stainless steel and specially machined components.</div></div>
+<div class="section3">
+		
+				<div class="container">
+    					<div class="card">
+          					<img src="PSX_20201220_180909.jpg" class="img">		
+						<div class="top-text">
+        						<div class="name">Akrapovic</div>
+							<p>Muffler </p>
+						</div>
+						<div class="bottom-text">
+        						<div class="text">
+								Akrapovic Evolution Line Features:<br>
+								- Titanium headers and mid-pipes. New scratch-resistant coating with the muffler outer sleeve. 30-40% lighter than a stainless steel exhaust system. Patented hexagonal muffler, with carbon-fiber outlet cap to match the design of each bike.
+							</div>
+							<div class="btn">
+            							<a href="">Read more</a>
+        						</div>
+						</div>
+					</div>
+					<div class="card">
+        					<img src="PSX_20201220_181313.jpg" class="img">
+						<div class="top-text">
+        						<div class="name">NCX</div>
+							<p>Muffler</p>
+						</div>
+						<div class="bottom-text">
+        						<div class="text">
+								NCX has a rich history of racing both on and off road. The pipes they create are born and forged with racing in mind. The products they make are the embodiment of their passion for this sport which is motorcycle racing.
+							</div>
+							<div class="btn">
+            							<a href="">Read more</a>
+       		 					</div>
+						</div>
+					</div>
+					<div class="card">
+         					<img src="PSX_20201221_191836.jpg" class="img">
+						<div class="top-text">
+          						<div class="name">Daeng</div>
+							<p>Muffler</p>
+						</div>
+						<div class="bottom-text">
+          						<div class="text">
+									 Superb quality, very good price, deep solid sound, and unparalleled performance.All Daeng Mufflers can be made for all kinds of bike models.(For Underbones & Scooters). It can also fit for Big Bikes and Motocross Bikes.
+							</div>
+							<div class="btn">
+            							<a href="">Read more</a>
+          						</div>
+						</div>
+					</div>
+					<div class="card">
+        					<img src="PSX_20201226_234055.jpg" class="img">
+					<div class="top-text">
+        					<div class="name">HiSpeed</div>
+						<p>Muffler</p>
+					</div>
+					<div class="bottom-text">
+        					<div class="text">
+							All HiSpeed mufflers can be made for all kinds of bike models.(For Underbones & Scooters)Honda Wave 110 & 125, Honda Wave Dash, Honda XRM 110 & 125, Yamaha MIO,Yamaha Sniper 135, Suzuki Raider 150, Honda XR200, Kawasaki Rouser 200, etc.
+						</div>
+						<div class="btn">
+            						<a href="">Read more</a>
+        					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	<div class="contentt">
+		<div class="images">
+			<div class="photo"><img src="PSX_20201219_180808.jpg" alt="tone" width="100" height="100"/><br></div>
+			<div class="photo1"><img src="PSX_20201220_181434.jpg" alt="two" width="100" height="100"/><br></div>
+			<div class="photo2"><img src="PSX_20201220_181452.jpg" alt="two" width="100" height="100"/><br></div>
+			<div class="photo2"><img src="PSX_20201015_203615.jpg" alt="two" width="100" height="100"/><br></div>
+			<div class="photo"><img src="PSX_20201218_204215.jpg" alt="tone" width="100" height="100"/><br></div>
+			<div class="photo1"><img src="PSX_20201218_204001.jpg" alt="two" width="100" height="100"/><br></div>
+			
+		</div>
+	</div>
+	<script>
+		var indexValue = 0;
+		function slideShow(){
+		setTimeout(slideShow, 2500);
+		var x;
+		const img = document.querySelectorAll("img");
+		for(x = 0; x < img.length; x++){
+		img[x].style.display = "none";
+        }
+		indexValue++;
+		if(indexValue > img.length){indexValue = 1}
+		img[indexValue -1].style.display = "block";
+	}
+		slideShow();
+	</script>
+
+<div class="wrapper">
+      <div class="title-text">
+        <div class="title login">
+Login Form</div>
+<div class="title signup">
+Signup Form</div>
+</div>
+<div class="form-container">
+        <div class="slide-controls">
+          <input type="radio" name="slide" id="login" checked>
+          <input type="radio" name="slide" id="signup">
+          <label for="login" class="slide login">Login</label>
+          <label for="signup" class="slide signup">Signup</label>
+          <div class="slider-tab">
+</div>
+</div>
+<div class="form-inner">
+          <form action="#" class="login">
+            <div class="field">
+              <input type="text" placeholder="Email Address" required>
+            </div>
+<div class="field">
+              <input type="password" placeholder="Password" required>
+            </div>
+<div class="pass-link">
+<a href="#">Forgot password?</a></div>
+<div class="field btn">
+              <div class="btn-layer">
+</div>
+<input type="submit" value="Login">
+            </div>
+<div class="signup-link">
+Not a member? <a href="">Signup now</a></div>
+</form>
+<form action="#" class="signup">
+            <div class="field">
+              <input type="text" placeholder="Email Address" required>
+            </div>
+<div class="field">
+              <input type="password" placeholder="Password" required>
+            </div>
+<div class="field">
+              <input type="password" placeholder="Confirm password" required>
+            </div>
+<div class="field btn">
+              <div class="btn-layer">
+</div>
+<input type="submit" value="Signup">
+            </div>
+</form>
+</div>
+</div>
+</div>
+<script>
+      const loginText = document.querySelector(".title-text .login");
+      const loginForm = document.querySelector("form.login");
+      const loginBtn = document.querySelector("label.login");
+      const signupBtn = document.querySelector("label.signup");
+      const signupLink = document.querySelector("form .signup-link a");
+      signupBtn.onclick = (()=>{
+        loginForm.style.marginLeft = "-50%";
+        loginText.style.marginLeft = "-50%";
+      });
+      loginBtn.onclick = (()=>{
+        loginForm.style.marginLeft = "0%";
+        loginText.style.marginLeft = "0%";
+      });
+      signupLink.onclick = (()=>{
+        signupBtn.click();
+        return false;
+      });
+    </script>
+
+	<section>
+		<div clas "box">
+			<h2><br>Quicklinks</h2>
+			<p>For more informations. Please contact us.<br><br>Email: Thaikana@gmail.com<br>Contact number: 0926-199-1458
+			<br>All rights reserved©2020</p>
+		</div>
+	</section>
+	</section>
+	</body>
+</html>
